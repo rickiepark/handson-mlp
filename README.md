@@ -1,52 +1,52 @@
-# Hands-On Machine Learning with Scikit-Learn and PyTorch
+# 핸즈온 머신러닝 with 사이킷런, 파이토치
 
-The goal of this project is to teach you the fundamentals of Machine Learning in Python. It contains the example code and solutions to the exercises in the first edition of my new O'Reilly book [Hands-on Machine Learning with Scikit-Learn and PyTorch (1st edition)](https://homl.info/):
+이 책은 파이썬으로 머신 러닝의 기초를 배우는 것이 목표입니다. 이 깃허브 저장소에는 <핸즈온 머신러닝 with 사이킷런, 파이토치>(한빛미디어, 2026)의 예제 코드와 연습 문제에 대한 솔루션이 포함되어 있습니다: ([교보문고](https://product.kyobobook.co.kr/detail/S000221505880), [Yes24](https://www.yes24.com/product/goods/197068692), [알라딘](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=403219344&start=pcsearch_auto), [한빛미디어](https://www.hanbit.co.kr/books/핸즈온-머신러닝-with-사이킷런-파이토치?code=B6522995423))
 
-<a href="https://homl.info/er"><img src="https://www.oreilly.com/covers/urn:orm:book:9798341607972/400w/" title="book" width="150" border="0" /></a>
+<a href="https://tensorflow.blog/handson-mlp/"><img src="https://i0.wp.com/tensorflow.blog/wp-content/uploads/2026/10/%EC%9E%85%EC%B2%B4%ED%91%9C%EC%A7%80.png?resize=1743%2C2048&ssl=1" title="book" width="500" border="0" /></a>
 
-**Note**: If you are looking for the notebooks for the TensorFlow/Keras version of this book, check out [ageron/handson-ml3](https://github.com/ageron/handson-ml3).
+**노트**: 이 책의 텐서플로/케라스 버전을 찾고 있다면 [rickiepark/handson-ml3](https://github.com/rickiepark/handson-ml3)를 확인하세요.
 
-## Quick Start
+## 빠르게 시작하기
 
-### Want to play with these notebooks online without having to install anything?
+### 아무것도 설치하지 않고도 온라인에서 이 노트북을 실행하고 싶은가요?
 
-- <a href="https://colab.research.google.com/github/ageron/handson-mlp/blob/main/" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a> (recommended)
+- <a href="https://colab.research.google.com/github/rickiepark/handson-mlp/blob/main/" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a> (추천)
 
-⚠ _Colab provides a temporary environment: anything you do will be deleted after a while, so make sure you download any data you care about._
+⚠ _코랩은 임시 환경을 제공하므로 일정 시간이 지나면 모든 작업이 삭제되므로 중요한 데이터는 반드시 다운로드하세요._
 
-### Just want to quickly look at some notebooks, without executing any code?
+### 코드를 실행하지 않고 노트북을 빠르게 살펴보고 싶은가요?
 
-- <a href="https://nbviewer.jupyter.org/github/ageron/handson-mlp/blob/main/index.ipynb"><img src="https://raw.githubusercontent.com/jupyter/design/master/logos/Badges/nbviewer_badge.svg" alt="Render nbviewer" /></a>
+- <a href="https://nbviewer.jupyter.org/github/rickiepark/handson-mlp/blob/main/index.ipynb"><img src="https://raw.githubusercontent.com/jupyter/design/master/logos/Badges/nbviewer_badge.svg" alt="Render nbviewer" /></a>
 
-- [github.com's notebook viewer](https://github.com/ageron/handson-mlp/blob/main/index.ipynb) also works but it's not ideal: it's slower, the math equations are not always displayed correctly, and large notebooks often fail to open.
+- [깃허브의 노트북 뷰어](https://github.com/rickiepark/handson-mlp/blob/main/index.ipynb)로도 볼 수 있지만 이상적이지는 않습니다. 페이지가 느리게 열리고 수학 방정식이 이따금 잘못 표시되거나 용량이 큰 노트북은 열리지 않는 경우가 많습니다.
 
-### Want to install this project on your own machine?
+### 이 프로젝트를 로컬 컴퓨터에 설치하고 싶은가요?
 
-Check out the [installation instructions](INSTALL.md).
+[INSTALL.md](INSTALL.md) 문서를 참고하세요.
 
 
 # FAQ
 
-**Which Python version should I use?**
+**어떤 파이썬 버전을 사용해야 하나요?**
 
-I recommend Python 3.12. If you follow the installation instructions above, that's the version you will get. Versions 3.10 and 3.11 should work as well, but some libraries are not yet available for 3.13.
+Python 3.12을 권장합니다. 위의 설치 가이드를 따르면 이 버전이 설치됩니다. 3.10과 3.11도 작동하지만 일부 라이브러리는 아직 3.13 버전을 지원하지 않습니다.
 
-**I'm getting an error when I call `load_housing_data()`**
+**`load_housing_data()`를 호출하면 에러가 발생합니다**
 
-If you're getting an HTTP error, make sure you're running the exact same code as in the notebook (copy/paste it if needed). If the problem persists, please check your network configuration. If it's an SSL error, see the next question.
+HTTP 오류가 발생하면 노트북에서와 똑같은 코드를 실행하고 있는지 확인하세요(복사/붙여넣기로 다시 실행해 보세요). 문제가 지속되면 네트워크 구성을 확인하세요. SSL 오류인 경우, 다음 질문을 참조하세요.
 
-**I'm getting an SSL error on MacOSX**
+**MacOSX에서 SSL 오류가 발생합니다**.
 
-You probably need to install the SSL certificates (see this [StackOverflow question](https://stackoverflow.com/questions/27835619/urllib-and-ssl-certificate-verify-failed-error)). If you downloaded Python from the official website, then run `/Applications/Python\ 3.12/Install\ Certificates.command` in a terminal (change `3.12` to whatever version you installed). If you installed Python using MacPorts, run `sudo port install curl-ca-bundle` in a terminal.
+SSL 인증서를 설치해야 합니다([스택오버플로 질문](https://stackoverflow.com/questions/27835619/urllib-and-ssl-certificate-verify-failed-error) 참조하세요). 공식 웹사이트에서 파이썬을 다운로드한 경우, 터미널에서 `/Applications/Python\ 3.12/Install\ Certificates.command`를 실행합니다(`3.12`를 설치한 버전으로 변경). MacPorts를 사용하여 파이썬을 설치한 경우, 터미널에서 `sudo port install curl-ca-bundle`을 실행합니다.
 
-**I've installed this project locally. How do I update it to the latest version?**
+**이 프로젝트를 로컬에 설치했습니다. 최신 버전으로 업데이트하려면 어떻게 해야 하나요?**
 
-See [INSTALL.md](INSTALL.md)
+[INSTALL.md](INSTALL.md)를 참고하세요.
 
-**How do I update my Python libraries to the latest versions, when using Anaconda?**
+**아나콘다를 사용할 때 파이썬 라이브러리를 최신 버전으로 업데이트하려면 어떻게 해야 하나요?**
 
-See [INSTALL.md](INSTALL.md)
+[INSTALL.md](INSTALL.md)를 참고하세요.
 
-## Contributors
+## 도움을 주신 분들
 
-I would like to thank everyone [who contributed to this project](https://github.com/ageron/handson-mlp/graphs/contributors), either by providing useful feedback, filing issues or submitting Pull Requests.
+유용한 피드백을 제공하거나 이슈를 제기하거나 풀 리퀘스트를 보내는 등 이 [프로젝트에 기여](https://github.com/rickiepark/handson-mlp/graphs/contributors)해 주신 모든 분들께 감사의 말씀을 드립니다.
